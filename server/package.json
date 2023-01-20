@@ -1,0 +1,23 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "habitracker server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sephyros/habitracker.git"
+  },
+  "keywords": [
+    "habits",
+    "tracker"
+  ],
+  "author": "Leonardo Vinicius Maciel aka Sephyros",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Sephyros/habitracker/issues"
+  },
+  "homepage": "https://github.com/Sephyros/habitracker#readme"
+}
