@@ -14,6 +14,9 @@ export function HabitDay({ completed = 0, amount = 0, date }: HabitDayProps) {
   const completedPercentage = amount > 0 ? Math.round((completed / amount) * 100) : 0
   const dayAndMonth = dayjs(date).format('DD/MM')
   const dayOfWeek = dayjs(date).format('dddd')
+  const today = dayjs().startOf('day').toDate()
+  const isCurrentDay = dayjs(date).isSame(today)
+
   return (
     <Popover.Root>
       <Popover.Trigger
@@ -23,7 +26,8 @@ export function HabitDay({ completed = 0, amount = 0, date }: HabitDayProps) {
           'bg-violet-400 border-violet-300': completedPercentage >= 25 && completedPercentage < 50,
           'bg-violet-500 border-violet-400': completedPercentage >= 50 && completedPercentage < 75,
           'bg-violet-600 border-violet-500': completedPercentage >= 75 && completedPercentage < 100,
-          'bg-violet-700 border-violet-600': completedPercentage === 100
+          'bg-violet-700 border-violet-600': completedPercentage === 100,
+          'border-green-500 border-3': isCurrentDay
         })}
       />
       <Popover.Portal>
