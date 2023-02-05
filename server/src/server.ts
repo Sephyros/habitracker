@@ -6,7 +6,7 @@ const app = Fastify({ logger: false })
 
 app.register(cors, {
   origin: [
-    'http://192.168.0.149:19000', // Mobile
+    'http://192.168.15.5:19000', // Mobile
     'http://localhost:5173' // Web
   ]
 })

@@ -22,11 +22,11 @@ export function HabitDay({ amountOfHabits = 0, amountCompleted = 0, date, ...res
     <TouchableOpacity
       className={clsx('rounded-lg border-2 m-1', {
         ['bg-zinc-800 border-zinc-700']: amountAccomplishedPercentage === 0,
-        ['bg-violet-300 border-violet-200']: amountAccomplishedPercentage > 0 && amountAccomplishedPercentage < 25,
-        ['bg-violet-400 border-violet-300']: amountAccomplishedPercentage >= 25 && amountAccomplishedPercentage < 50,
-        ['bg-violet-500 border-violet-400']: amountAccomplishedPercentage >= 50 && amountAccomplishedPercentage < 75,
+        ['bg-violet-900 border-violet-800']: amountAccomplishedPercentage > 0 && amountAccomplishedPercentage < 25,
+        ['bg-violet-800 border-violet-700']: amountAccomplishedPercentage >= 25 && amountAccomplishedPercentage < 50,
+        ['bg-violet-700 border-violet-600']: amountAccomplishedPercentage >= 50 && amountAccomplishedPercentage < 75,
         ['bg-violet-600 border-violet-500']: amountAccomplishedPercentage >= 75 && amountAccomplishedPercentage < 100,
-        ['bg-violet-700 border-violet-600']: amountAccomplishedPercentage === 100,
+        ['bg-violet-500 border-violet-400']: amountAccomplishedPercentage === 100,
         ['border-green-500 border-3']: isCurrentDay
       })}
       style={{ width: DAY_SIZE, height: DAY_SIZE }}

@@ -1,6 +1,6 @@
+import { useState, useCallback } from "react";
 import { View, Text, ScrollView, Alert } from "react-native";
-import { useState, useEffect } from "react";
-import { useNavigation } from "@react-navigation/native";
+import { useNavigation, useFocusEffect } from "@react-navigation/native";
 
 import { api } from "../lib/axios";
 import { generateRangeDatesFromYearStart } from '../utils/generate-range-dates-from-year-start'
@@ -41,9 +41,7 @@ export function Home() {
     }
   }
 
-  useEffect(() => {
-    fetchData()
-  }, [])
+  useFocusEffect(useCallback(() => { fetchData() }, []))
 
   if (loading) {
     return (<Loading />)
